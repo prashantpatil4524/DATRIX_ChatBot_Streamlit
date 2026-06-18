@@ -1,0 +1,1 @@
+{"name":"NL2SQL Analytics Chatbot","description":"An AI-powered NL2SQL Analytics Chatbot that translates plain English to SQL, executes it against a database, and visualizes results with gorgeous bioluminescent charts and themes.","requestFramePermissions":[],"majorCapabilities":["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]}

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Share+Tech+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Exo 2", sans-serif;
+  --font-mono: "Share Tech Mono", monospace;
+  --font-hero: "Orbitron", sans-serif;
+  --font-body: "Exo 2", sans-serif;
+  --font-code: "Share Tech Mono", monospace;
+  --font-bot: "Exo 2", sans-serif;
+  --font-label: "Orbitron", sans-serif;
+  --font-data: "Share Tech Mono", monospace;
+}
+
+/* Redesigned Cyberpunk Root Variables (Dribbble Dashboard Style) */
+:root {
+  --void: #12141F;          /* Dark Void Background */
+  --abyss: #151722;         /* Rich Slate Panel base */
+  --depth: #1A1D2B;         /* Floating Glass Panels */
+  --surface: #1E202B;       /* Secondary Widgets background */
+  --bio-teal: #00D4FF;      /* Cyber Electrometer Cyan */
+  --bio-lime: #7B5EA7;      /* Synth Wave Purple */
+  --bio-coral: #FF5E7E;     /* Bioluminescent Coral */
+  --bio-ghost: #E2E8F0;     /* Metallic Silver White */
+  --bio-dim: #7E869C;       /* Slate Cyber Grey */
+  --bio-deep: rgba(0, 212, 255, 0.15); /* Glass Neon Cyan Border */
+
+  --glass-bg: rgba(26, 29, 43, 0.75);
+  --glass-border: rgba(0, 212, 255, 0.15);
+  --chat-bot-bg: #151722;
+  --chat-user-bg: rgba(123, 94, 167, 0.15);
+
+  --offset-shadow-sm: 0 0 12px rgba(0, 212, 255, 0.15);
+  --offset-shadow-md: 0 0 20px rgba(0, 212, 255, 0.2);
+  --offset-shadow-lg: 0 0 35px rgba(0, 212, 255, 0.3);
+  
+  --scanlines-display: block;
+
+  /* Neumorphism Base Defaults */
+  --neu-bg: #161824;
+  --neu-light: #212436;
+  --neu-dark: #0b0c12;
+}
+
+/* Base resets & textured backgrounds */
+body, [data-testid="stAppViewContainer"] {
+  background-color: var(--neu-bg) !important;
+  color: var(--bio-ghost);
+  font-family: var(--font-body), sans-serif;
+  background-image: none !important;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bio-teal);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bio-coral);
+}
+
+/* Custom Neumorphism utility classes */
+.neumorphic-flat {
+  background-color: var(--neu-bg);
+  box-shadow: 8px 8px 20px var(--neu-dark), -8px -8px 20px var(--neu-light);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.neumorphic-inset {
+  background-color: var(--neu-bg);
+  box-shadow: inset 6px 6px 15px var(--neu-dark), inset -6px -6px 15px var(--neu-light);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.neumorphic-btn {
+  background-color: var(--neu-bg);
+  box-shadow: 4px 4px 10px var(--neu-dark), -4px -4px 10px var(--neu-light);
+  transition: all 0.2s ease-in-out;
+  border-radius: 12px;
+}
+
+.neumorphic-btn:hover:not(:disabled) {
+  box-shadow: 2px 2px 5px var(--neu-dark), -2px -2px 5px var(--neu-light);
+  transform: translateY(1px);
+}
+
+.neumorphic-btn:active:not(:disabled) {
+  box-shadow: inset 3px 3px 6px var(--neu-dark), inset -3px -3px 6px var(--neu-light);
+  transform: translateY(2px);
+}
+
+.neumorphic-inp {
+  background-color: var(--neu-bg) !important;
+  box-shadow: inset 4px 4px 10px var(--neu-dark), inset -4px -4px 10px var(--neu-light) !important;
+  border: 1px solid transparent !important;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  border-radius: 12px;
+}
+
+.neumorphic-inp:focus {
+  border-color: rgba(0, 212, 255, 0.4) !important;
+}
+
+/* Animations */
+@keyframes rotOuter {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotInner {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes corePulse {
+  0% { opacity: 0.3; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1.15); }
+}
